@@ -10,6 +10,10 @@ export const theme = {
     primary: '#909090',
     secondary: '#414757',
     error: '#f13a59',
-    black:'#000000'
+    black:'#000000',
+    white:'#FFFFFF',
+    blue:'#407FDB',
+    greybackgroundcolor:'#E6E7EB',
+    bordercolor:'#E6E8EA'
   },
 }

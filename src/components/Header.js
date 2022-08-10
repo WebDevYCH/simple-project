@@ -10,10 +10,11 @@ export default function Header(props) {
 
 const styles = StyleSheet.create({
   header: {
+    position:'fixed',
     width:'100%',
+    zIndex:10,
     flexDirection:'row',
     paddingBottom:10,
-    position: 'absolute',
     top:0,
     paddingTop: 30 + getStatusBarHeight(),
     fontSize: 32,

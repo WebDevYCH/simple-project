@@ -5,7 +5,7 @@ import Header from '../components/Header';
 import TextInput from '../components/TextInput';
 import Button from '../components/Button'
 
-export default function LoginScreen() {
+export default function LoginScreen({navigation}) {
   const [email, setEmail] = useState({ value: '', error: '' })
   const [password, setPassword] = useState({ value: '', error: '' })
   return (
@@ -42,7 +42,7 @@ export default function LoginScreen() {
         </Button>
       </View>
       <View style={styles.textgroup}>
-        <Text >Register Free</Text>
+        <Text onPress={() => navigation.navigate('UpgradeScreen')}>Register Free</Text>
         <Text >Forgot Password</Text>
       </View>
     </View>

@@ -9,6 +9,7 @@ export default function TextInput({ errorText, description, ...props }) {
       <Input
         style={styles.input}
         selectionColor={theme.colors.primary}
+        activeOutlineColor={theme.colors.black}
         underlineColor="transparent"
         mode="outlined"
         {...props}
