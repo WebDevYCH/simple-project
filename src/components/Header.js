@@ -10,16 +10,17 @@ export default function Header(props) {
 
 const styles = StyleSheet.create({
   header: {
-    width:1000,
+    width:'100%',
+    flexDirection:'row',
     paddingBottom:10,
     position: 'absolute',
     top:0,
     paddingTop: 30 + getStatusBarHeight(),
-    fontSize: 21,
+    fontSize: 32,
     color: theme.colors.black,
     fontWeight: 'bold',
     backgroundColor:theme.colors.primary,
-    textAlign:'center'
+    textAlign:'center',
   },
   background:{
     

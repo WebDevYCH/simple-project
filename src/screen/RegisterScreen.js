@@ -5,11 +5,15 @@ import Header from '../components/Header';
 import TextInput from '../components/TextInput';
 import Button from '../components/Button'
 
-export default function LoginScreen() {
+export default function RegisterScreen() {
   const [email, setEmail] = useState({ value: '', error: '' })
   const [password, setPassword] = useState({ value: '', error: '' })
   return (
     <View style={styles.container}>
+      <Image
+        style={{ width:152.5,height:8,marginTop: 50,resizeMode: 'stretch',}}
+        source={require('../../img/star.svg')}
+      />
       <Header>LOGO</Header>
       <Text style={styles.login}>Login</Text>
       <View style={styles.buttongroup}>
