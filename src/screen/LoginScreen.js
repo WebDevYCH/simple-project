@@ -71,10 +71,9 @@ const styles = StyleSheet.create({
     marginBottom:80,                   
   },
   login:{
-    width:'100%',
+    width:'87%',
     textAlign:'left',
     marginTop:20,
-    marginLeft:52,
     fontSize:12,
     fontWeight:700,
     justifyContent:'flex-start'

@@ -7,9 +7,11 @@ import ExplorerScreen from '../screen/ExplorerScreen'
 import MatchesScreen from '../screen/MatchesScreen'
 import InboxScreen from '../screen/InboxScreen'
 import ProfileScreen from '../screen/ProfileScreen'
-import Header from '../components/Header';
+import MainHeader from '../components/MainHeader';
 import Svg, { Path } from "react-native-svg"
 import { theme } from '../core/theme';
+import { useState } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
 const Stack = createNativeStackNavigator()
   
@@ -31,16 +33,45 @@ return (
 }
 const Tab = createBottomTabNavigator();
 function MaineScreen() {
+    const [filter,setFilter]=useState('filter');
+    const [pushName,setPushName]=useState('');
     return (
         <Tab.Navigator
+            screenListeners={{
+                state: (e) => {
+                   switch(e.data.state.index){
+                     case 0:{
+                                setFilter('filter');
+                                setPushName('');
+                                break;
+                            }
+                    case 1:{
+                                setFilter('');
+                                setPushName('');
+                                break;
+                            }
+                    case 2:{
+                                setFilter('');
+                                setPushName('');
+                                break;
+                            }
+                    default:{
+                                setFilter('');
+                                setPushName('');
+                                break;
+                            }
+                   }
+                },
+            }}
             screenOptions={{
                 // tabBarShowLabel:false,
                 tabBarLabelPosition:'below-icon',
                 header: ({ navigation, route, options }) => {
-                    return <Header>LOGO</Header>;
+                    return  <MainHeader text='LOGO' filter={filter}/>;
                   },
                 tabBarActiveTintColor: theme.colors.active,
                 tabBarInactiveTintColor:theme.colors.inactive,
+            
             }}
         >
             <Tab.Screen 
