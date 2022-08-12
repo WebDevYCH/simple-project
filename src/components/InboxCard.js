@@ -22,11 +22,11 @@ const styles = StyleSheet.create({
     borderBottomWidth:2,
     paddingBottom:10,
   },
-  userphoto:{
-    borderRadius: 5,
-    width:80,
-    height:80,
-  },
+    userphoto:{
+      borderRadius: 5,
+      width:80,
+      height:80,
+    },
   item: {
     padding: 10,
     fontSize: 12,
