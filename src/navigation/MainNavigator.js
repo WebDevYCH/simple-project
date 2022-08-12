@@ -8,6 +8,7 @@ import MatchesScreen from '../screen/MatchesScreen'
 import InboxScreen from '../screen/InboxScreen'
 import ProfileScreen from '../screen/ProfileScreen'
 import MainHeader from '../components/MainHeader';
+import EditProfileScreen from '../screen/EditProfileScreen'
 import Svg, { Path } from "react-native-svg"
 import { theme } from '../core/theme';
 import { useState } from 'react';
@@ -26,6 +27,11 @@ return (
         <Stack.Screen
             name="OtherScreen"
             component={OtherScreen}
+            options={{ headerShown: false }}
+        />
+         <Stack.Screen
+            name="EditProfileScreen"
+            component={EditProfileScreen}
             options={{ headerShown: false }}
         />
     </Stack.Navigator>
@@ -51,13 +57,13 @@ function MaineScreen() {
                                 break;
                             }
                     case 2:{
-                                setFilter('');
+                                setFilter(''); 
                                 setPushName('');
                                 break;
                             }
                     default:{
                                 setFilter('');
-                                setPushName('');
+                                setPushName('EditProfileScreen');
                                 break;
                             }
                    }
@@ -67,7 +73,7 @@ function MaineScreen() {
                 // tabBarShowLabel:false,
                 tabBarLabelPosition:'below-icon',
                 header: ({ navigation, route, options }) => {
-                    return  <MainHeader text='LOGO' filter={filter}/>;
+                    return  <MainHeader text='LOGO' filter={filter} onUpgrade={()=>{navigation.navigate(pushName)}}/>;
                   },
                 tabBarActiveTintColor: theme.colors.active,
                 tabBarInactiveTintColor:theme.colors.inactive,

@@ -10,7 +10,7 @@ export default function MainHeader(props) {
   return <View style={styles.container}>
      <Header>{props.text}</Header>
      <View style={styles.button}>
-        <TouchableOpacity style={styles.buttonstyle} onPress={() => {}}> 
+        <TouchableOpacity style={styles.buttonstyle} onPress={props.onUpgrade}> 
           <Text >Upgrade</Text>
         </TouchableOpacity> 
         <TouchableOpacity onPress={() => {}}> 

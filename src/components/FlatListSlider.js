@@ -19,7 +19,7 @@ export default class FlatListSlider extends Component {
     imageKey: 'image',
     local: false,
     width: Math.round(Dimensions.get('window').width),
-    height: 230,
+    height: 310,
     separatorWidth: 0,
     loop: true,
     indicator: true,
@@ -78,7 +78,7 @@ export default class FlatListSlider extends Component {
           showsHorizontalScrollIndicator={false}
           renderItem={({item, index}) =>
             React.cloneElement(this.props.component, {
-              style: {width: this.props.width},
+              style: {width: this.props.width,borderRadius:20,},
               item: item,
               imageKey: this.props.imageKey,
               onPress: this.props.onPress,
@@ -86,6 +86,7 @@ export default class FlatListSlider extends Component {
               active: index === this.state.index,
               local: this.props.local,
               height: this.props.height,
+              
             })
           }
           ItemSeparatorComponent={() => (
