@@ -1,7 +1,7 @@
 import {
     createNativeStackNavigator
   } from '@react-navigation/native-stack'
-import LoginScreen from '../screen/EditProfileScreen'
+import LoginScreen from '../screen/LoginScreen'
 import UpgradeScreen from '../screen/UpgradeScreen'
 
 

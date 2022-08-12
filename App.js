@@ -18,7 +18,7 @@ export default function App() {
 }
 
 const NavigatorSwitch = observer(() => {
-  if (true) {   //auth funcc
+  if (false) {   //auth funcc
     return <LoginNavigator />
   }else {
     return <MainNavigator />
